@@ -41,10 +41,10 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
 
-<script src="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/jquery-2.0.2.min.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/playingCards.ui.css">
-<script src="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/playingCards.js"></script>
-<script src="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/playingCards.ui.js"></script>
+<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/jquery-2.0.2.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.ui.css">
+<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>
+<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>
 
 
 <h3>Big Two</h3>
@@ -91,12 +91,9 @@ function showParticipants() {
 
 function deal() {
   console.log("Dealing")
-  var conf={
-        "imgPrefix": "https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/img/"
-        }
   var cardDeck = $("#cardDeck").playingCards();
 
-  playingCards.card.defaults.imgPrefix="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/"
+  playingCards.card.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/img/js/"
 
   cardDeck.spread(); // show it
 }
