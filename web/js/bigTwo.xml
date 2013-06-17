@@ -98,7 +98,7 @@ function deal() {
 
   playingCards.card.defaults.imgPrefix="https://googledrive.com/host/0B3IcH2Dhe9PVWDdCZ1R4aHhhZkk/bigTwo/"
 
-  cardDeck.spread(); // show it  T4est CHange
+  cardDeck.spread(); // show it
 }
 
 function init() {
