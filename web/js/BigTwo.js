@@ -1,0 +1,2 @@
+
+$('#cardTable').playingCards();
