@@ -94,8 +94,8 @@ function showParticipants() {
 
 function deal() {
   console.log("Dealing")
-  playingCards.card.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
-  var cardDeck = createDeck(playingCards.card.defaults)
+  playingCards.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
+  var cardDeck = createDeck(playingCards.defaults)
   var c = draw(cardDeck);
   console.log("Drew Card")
   console.log(c)
