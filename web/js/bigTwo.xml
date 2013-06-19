@@ -109,7 +109,7 @@ var onParticipantsChange = function(eventObj) {
 var onStateChange = function(eventObj) {
   var cardDeck = eventObj.cardDeck;
   console.log(eventObj)
-  console.log(cardDeck);
+  console.log(eventObj.state.cardDeck);
 };
 
 function init() {
