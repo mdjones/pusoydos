@@ -45,7 +45,7 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 <!--<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>-->
 <!--<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>-->
 
-<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/bigTwo.js"></script>
+<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/BigTwo.js"></script>
 
 <body>
 
