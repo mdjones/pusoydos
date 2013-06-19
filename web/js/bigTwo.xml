@@ -108,7 +108,7 @@ var onParticipantsChange = function(eventObj) {
 
 var onStateChange = function(eventObj) {
   var cardDeck = eventObj.cardDeck;
-  console.log("Card Deck?: " + eventObj)
+  console.log(eventObj)
   console.log(cardDeck);
 };
 
