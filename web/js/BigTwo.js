@@ -15,7 +15,7 @@
             }
             // jokers
             for (i = 0; i < o.jokers; i++) {
-                l = this.cards.length;
+                l = cards.length;
                 // suit will always be 1 or 2
                 cards[l] = new playingCards.card("N", o.jokerText, (i % 2) + 1, '');
             }
