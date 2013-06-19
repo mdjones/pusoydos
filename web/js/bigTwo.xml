@@ -42,9 +42,9 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 
 <link rel="stylesheet" type="text/css" media="all" href="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.ui.css">
-<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/jquery-2.0.2.min.js"></script>
-<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>
-<script src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>
+<script type="text/javascript" src="https://raw.github.com/mdjones/pusoydos/master/web/js/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>
+<script type="text/javascript" src="https://raw.github.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>
 
 
 <h3>Big Two</h3>
