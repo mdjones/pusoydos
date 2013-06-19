@@ -97,13 +97,12 @@ function deal() {
   playingCards.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
   var cardDeck = createDeck(playingCards.defaults)
   var c = draw(cardDeck);
-  console.log("Drew Card")
-  console.log(c)
-  console.log("That was is")
+ console.log("cardS")
+  console.log(c);
+   console.log("cardE")
 
   //var cardDeck = $("#cardDeck").playingCards();
   //cardDeck.spread(); // show it
-  console.log(cardDeck)
   gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
 }
 
@@ -116,13 +115,13 @@ var onStateChange = function(eventObj) {
  if(eventObj.state.cardDeck){
 
   var cardDeck = JSON.parse(eventObj.state.cardDeck)
-   console.log("SDFSDF")
-  console.log(cardDeck);
-      console.log("FDSFSDFSD")
+
 
 
   var c = draw(cardDeck);
+  console.log("cardS")
   console.log(c);
+   console.log("cardE")
   //showHand(c)
   }
 };
