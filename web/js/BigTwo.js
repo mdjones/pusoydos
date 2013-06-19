@@ -53,7 +53,7 @@
      *
      * @param int n The number of times to shuffle (defaults to 5)
      */
-    var shuffle = function(n, cards) {
+    var shuffle = function(cards, n) {
         if (!n) {
             n = 5;
         }
