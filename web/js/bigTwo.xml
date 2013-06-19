@@ -62,6 +62,12 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
     onClick="deal()"/>
 </p>
 
+
+<input class="button" type="button" value="Draw!" id="deal"
+    style="visibility:hidden;"
+    onClick="draw()"/>
+</p>
+
 <div id="participantsDiv"></div>
 
 <div id="yourHand">Hand</div>
@@ -106,6 +112,17 @@ function deal() {
   gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
 }
 
+function draw(){
+    var cardDeck = JSON.parse(state.cardDeck);
+
+     var c = draw(cardDeck);
+ console.log("cardS")
+  console.log(c);
+   console.log("cardE")
+
+    gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
+}
+
 var onParticipantsChange = function(eventObj) {
   participants_ = eventObj.participants;
   console.log(participants_);
@@ -113,16 +130,7 @@ var onParticipantsChange = function(eventObj) {
 
 var onStateChange = function(eventObj) {
  if(eventObj.state.cardDeck){
-
-  var cardDeck = JSON.parse(eventObj.state.cardDeck)
-
-
-
-  var c = draw(cardDeck);
-  console.log("cardS")
-  console.log(c);
-   console.log("cardE")
-  //showHand(c)
+    var cardDeck = JSON.parse(eventObj.state.cardDeck)
   }
 };
 
