@@ -112,9 +112,12 @@ var onParticipantsChange = function(eventObj) {
 
 var onStateChange = function(eventObj) {
   var cardDeck = eventObj.cardDeck;
-  console.log(eventObj)
-  console.log(eventObj.state.cardDeck);
+
   var cardDeck = JSON.parse(eventObj.state.cardDeck)
+   console.log("SDFSDF")
+  console.log(cardDeck);
+      console.log("FDSFSDFSD")
+
 
   var c = cardDeck.draw();
   showHand(c)
