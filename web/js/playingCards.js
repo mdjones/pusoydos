@@ -51,7 +51,7 @@ if (Array.indexOf === undefined) {
 	/**
 	 * initializer - builds the deck
 	 */
-    playingCards.prototype.init = function() {	
+    playingCards.init = function() {
      	this.cards = [];
         var o = this.conf,
 			l,i,s,r;
@@ -73,27 +73,27 @@ if (Array.indexOf === undefined) {
         }
     };
 	// TODO: create more methods:
-	// playingCards.prototype.order (set to out-of-box ordering) 
+	// playingCards.order (set to out-of-box ordering)
 	// -- do we want other special formations (like trick deck ordering systems that deal perfect hands)?
 	// -- probably going to leave this as an extension option
     /**
      * draw a card
 	 * @return mixed (object|null) A card object (if a card is available)
      */
-    playingCards.prototype.draw = function() {
+    playingCards.draw = function() {
         return this.cards.length > 0 ? this.cards.pop() : null;
     };
     /**
 	 * add a card to the top of the deck
 	 */
-    playingCards.prototype.addCard = function(card) {
+    playingCards.addCard = function(card) {
         this.cards.push(card);
     };
     /**
 	 * get the number of cards remaining in the deck 
 	 * (easy enough just to call cardObject.cards.length but hey)
 	 */
-    playingCards.prototype.count = function() {
+    playingCards.count = function() {
         return this.cards.length;
     };
     /**
@@ -101,7 +101,7 @@ if (Array.indexOf === undefined) {
      *
      * @param int n The number of times to shuffle (defaults to 5)
      */
-    playingCards.prototype.shuffle = function(n) {
+    playingCards.shuffle = function(n) {
         if (!n) {
             n = 5;
         }
@@ -121,7 +121,7 @@ if (Array.indexOf === undefined) {
 	 * requires jquery (currently)
 	 * TODO: put this in a UI extension pack along with all the other demo methods
 	 */
-    playingCards.prototype.spread = function(dest) {
+    playingCards.spread = function(dest) {
         if (!this.conf.el && !dest) {
             return false;
         }
@@ -208,7 +208,7 @@ if (Array.indexOf === undefined) {
     /**
 	 * get the text representation of the card
 	 */
-    playingCards.card.prototype.toString = function() {
+    playingCards.card.toString = function() {
         // TODO: localize "of"
         return this.suitString !== "" ? this.rankString + " of " + this.suitString: this.rankString;
     };
