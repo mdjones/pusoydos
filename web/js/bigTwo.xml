@@ -93,8 +93,10 @@ function showParticipants() {
 function deal() {
   console.log("Dealing")
   playingCards.card.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
-  var cardDeck = $("#cardDeck").playingCards();
-  cardDeck.spread(); // show it
+  var cardDeck = new playingCards();
+
+  //var cardDeck = $("#cardDeck").playingCards();
+  //cardDeck.spread(); // show it
   console.log(cardDeck)
   gapi.hangout.data.setValue("deck", JSON.stringify(cardDeck));
 }
