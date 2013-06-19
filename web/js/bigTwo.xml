@@ -106,6 +106,12 @@ var onParticipantsChange = function(eventObj) {
   console.log(participants_);
 };
 
+var onStateChange = function(eventObj) {
+  var cardDeck = eventObj.cardDeck;
+  console.log("Card Deck?")
+  console.log(cardDeck);
+};
+
 function init() {
   // When API is ready...                                                         
   gapi.hangout.onApiReady.add(
@@ -122,6 +128,7 @@ function init() {
             };
 
             gapi.hangout.onParticipantsChanged.add(onParticipantsChange);
+            gapi.hangout.data.onStateChanged.add(onStateChange);
         }
       });
 }
