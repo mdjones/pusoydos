@@ -62,7 +62,7 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 
 <div id="participantsDiv"></div>
 
-<div id="cardDeck">Card Deck</div>
+<div id="yourHand">Hand</div>
 
 <hr>
 
@@ -110,7 +110,18 @@ var onStateChange = function(eventObj) {
   var cardDeck = eventObj.cardDeck;
   console.log(eventObj)
   console.log(eventObj.state.cardDeck);
+
+  var c = eventObj.state.cardDeck.draw();
+  showHand(c)
 };
+
+var showHand = function(card){
+                var el = $('#yourHand')
+                el.html('');
+                for(var i=0;i<hand.length;i++){
+                    el.append(card.getHTML());
+                }
+            }
 
 function init() {
   // When API is ready...                                                         
