@@ -95,7 +95,9 @@ function deal() {
   playingCards.card.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
   var cardDeck = new playingCards();
   var c = cardDeck.draw();
+  console.log("Drew Card")
   console.log(c)
+  console.log("That was is")
 
   //var cardDeck = $("#cardDeck").playingCards();
   //cardDeck.spread(); // show it
