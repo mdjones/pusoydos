@@ -92,12 +92,16 @@ function showParticipants() {
 
 function deal() {
   console.log("Dealing")
-  var cardDeck = $("#cardDeck").playingCards();
-
   playingCards.card.defaults.imgPrefix="https://rawgithub.com/mdjones/pusoydos/master/web/img/js/"
-
+  var cardDeck = $("#cardDeck").playingCards();
   cardDeck.spread(); // show it
+  gapi.hangout.data.setValue("deck", JSON.stringify(cardDeck));
 }
+
+var onParticipantsChange = function(eventObj) {
+  participants_ = eventObj.participants;
+  console.log(participants_);
+};
 
 function init() {
   // When API is ready...                                                         
@@ -108,6 +112,13 @@ function init() {
             .style.visibility = 'visible';
           document.getElementById('deal')
             .style.visibility = 'visible';
+
+
+            var onParticipantsChange = function(eventObj) {
+              participants_ = eventObj.participants;
+            };
+
+            gapi.hangout.onParticipantsChanged.add(onParticipantsChange);
         }
       });
 }
