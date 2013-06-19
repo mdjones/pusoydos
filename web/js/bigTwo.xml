@@ -119,6 +119,7 @@ function drawCard(){
      var c = draw(cardDeck);
  console.log("cardS")
   console.log(c);
+  console.log(count(cardDeck))
    console.log("cardE")
 
     gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
