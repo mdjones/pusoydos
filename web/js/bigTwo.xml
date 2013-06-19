@@ -42,8 +42,10 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 
 <link rel="stylesheet" type="text/css" media="all" href="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.ui.css">
 <script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/jquery-2.0.2.min.js"></script>
-<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>
-<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>
+<!--<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.js"></script>-->
+<!--<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/playingCards.ui.js"></script>-->
+
+<script src="https://rawgithub.com/mdjones/pusoydos/master/web/js/bigTwo.js"></script>
 
 <body>
 
@@ -93,8 +95,8 @@ function showParticipants() {
 function deal() {
   console.log("Dealing")
   playingCards.card.defaults.imgPrefix="https://raw.github.com/mdjones/pusoydos/master/web/"
-  var cardDeck = new playingCards();
-  var c = cardDeck.draw();
+  var cardDeck = createDeck(playingCards.card.defaults)
+  var c = draw(cardDeck);
   console.log("Drew Card")
   console.log(c)
   console.log("That was is")
@@ -119,8 +121,9 @@ var onStateChange = function(eventObj) {
       console.log("FDSFSDFSD")
 
 
-  var c = cardDeck.draw();
-  showHand(c)
+  var c = draw(cardDeck);
+  console.log(c);
+  //showHand(c)
 };
 
 var showHand = function(card){
