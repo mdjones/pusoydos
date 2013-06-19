@@ -31,7 +31,7 @@
 	 * @return mixed (object|null) A card object (if a card is available)
      */
     var draw = function(cards) {
-        return cards.length > 0 ? this.cards.pop() : null;
+        return cards.length > 0 ? cards.pop() : null;
     };
     /**
 	 * add a card to the top of the deck
@@ -63,8 +63,8 @@
         for (i = 0; i < n; i++) {
             for (j = 0; j < l; j++) {
                 r = Math.floor(Math.random() * l);
-                tmp = this.cards[j];
-                cards[j] = this.cards[r];
+                tmp = cards[j];
+                cards[j] = cards[r];
                 cards[r] = tmp;
             }
         }
