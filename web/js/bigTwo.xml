@@ -114,8 +114,9 @@ var onStateChange = function(eventObj) {
   var cardDeck = eventObj.cardDeck;
   console.log(eventObj)
   console.log(eventObj.state.cardDeck);
+  var cardDeck = JSON.parse(eventObj.state.cardDeck)
 
-  var c = eventObj.state.cardDeck.draw();
+  var c = cardDeck.draw();
   showHand(c)
 };
 
