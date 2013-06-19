@@ -98,7 +98,7 @@ function deal() {
   //var cardDeck = $("#cardDeck").playingCards();
   //cardDeck.spread(); // show it
   console.log(cardDeck)
-  gapi.hangout.data.setValue("deck", JSON.stringify(cardDeck));
+  gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
 }
 
 var onParticipantsChange = function(eventObj) {
