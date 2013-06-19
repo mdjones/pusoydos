@@ -65,7 +65,7 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 
 <input class="button" type="button" value="Draw!" id="draw"
     style="visibility:hidden;"
-    onClick="draw()"/>
+    onClick="drawCard()"/>
 </p>
 
 <div id="participantsDiv"></div>
@@ -112,7 +112,7 @@ function deal() {
   gapi.hangout.data.setValue("cardDeck", JSON.stringify(cardDeck));
 }
 
-function draw(){
+function drawCard(){
     var state = gapi.hangout.data.getState();
     var cardDeck = JSON.parse(state.cardDeck);
 
