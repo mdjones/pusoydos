@@ -113,7 +113,7 @@ var onParticipantsChange = function(eventObj) {
 };
 
 var onStateChange = function(eventObj) {
-  var cardDeck = eventObj.cardDeck;
+ if(eventObj.state.cardDeck){
 
   var cardDeck = JSON.parse(eventObj.state.cardDeck)
    console.log("SDFSDF")
@@ -124,6 +124,7 @@ var onStateChange = function(eventObj) {
   var c = draw(cardDeck);
   console.log(c);
   //showHand(c)
+  }
 };
 
 var showHand = function(card){
