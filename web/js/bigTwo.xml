@@ -63,7 +63,7 @@ background: -moz-linear-gradient(bottom, #ddd, #aaa); }
 </p>
 
 
-<input class="button" type="button" value="Draw!" id="deal"
+<input class="button" type="button" value="Draw!" id="draw"
     style="visibility:hidden;"
     onClick="draw()"/>
 </p>
@@ -150,6 +150,8 @@ function init() {
           document.getElementById('showParticipants')
             .style.visibility = 'visible';
           document.getElementById('deal')
+            .style.visibility = 'visible';
+            document.getElementById('draw')
             .style.visibility = 'visible';
 
 
