@@ -113,6 +113,7 @@ function deal() {
 }
 
 function draw(){
+    var state = gapi.hangout.data.getState();
     var cardDeck = JSON.parse(state.cardDeck);
 
      var c = draw(cardDeck);
